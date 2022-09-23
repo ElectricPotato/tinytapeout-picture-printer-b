@@ -1,0 +1,37 @@
+--- 
+# TinyTapeout project information
+#
+# As everyone will have access to all designs, try to make it easy for someone new to your design to know what
+# it does and how to operate it.
+#
+# This will be automatically collected and used to make a datasheet for the chip.
+project: 
+  author:       "Miron Zadora"
+  title:        "Picture Printer"
+  description:  "Outputs the Edinburgh Hacklab logo pixel by pixel"
+  how_it_works: "It outputs the image pixel by pixel, line by line, left to right, top to bottom. 1 pixel per clock cycle. Image is 41 by 41 pixels. 1 = black pixel, 0 = white pixel."
+  how_to_test:  "Supply a clock to 1st input and hold 2nd input high for one clock cycle to reset. Everything in the design happens on the rising edge of the clock. Connect external hardware described below."
+  external_hw:  "Something to decode and display the image. E.g. An arduino connected to the chip Clock and Pixel Output pins could be used to display the 1s and 0s coming from the chip as '@' and '.' characters in a serial console, putting a newline every 41 characters (41 is the width of the image)"
+  doc_link:     "https://github.com/ElectricPotato/tinytapeout-picture-printer-b/blob/main/README.md"
+  clock_hz:     1000
+  language:     "verilog"
+  wokwi_id:     341542971476279892
+  picture:      "images/img1_ehlab.png"
+  inputs:               # a description of what the inputs do
+    - Clock
+    - Synchronous reset
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+  outputs:
+    - Pixel output         # a description of what the outputs do
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
